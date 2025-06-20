@@ -40,6 +40,11 @@ img {
     display: block;
 }
 
+nav ul li a {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
 /* === HERO PAGE === */
 
 header {
@@ -66,19 +71,43 @@ li {
     cursor: pointer;
     transition: .3s;
     font-size: 4vh;
-
 }
 
 li:hover {
     font-weight: bold;
 }
 
-.mobile-menu {
+.menu-icon {
     display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #00F0FF;
+    padding: 10px;
+    z-index: 1001;
 }
 
-.mobile-menu i {
+.mobile-nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #121212;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    z-index: 1000;
+}
+
+.mobile-nav-links.show {
+    display: block;
+}
+
+.mobile-nav-links li a {
     color: #F2F2F2;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
 }
 
 body {
@@ -131,6 +160,7 @@ body {
     cursor: pointer;
     transition: .3s;
     margin-top: 10vh;
+    text-align: center;
 }
 
 .CTA-button:hover {
@@ -297,10 +327,19 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
-    transition: 0.3s;
     cursor: pointer;
+    transition: .3s;
     color: #F2F2F2;
     text-align: center;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.filter-button.active {
+    background-color: #00c0cc;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 .portfolio-card img {
@@ -348,7 +387,7 @@ body {
     margin-top: 2vh;
 }
 
-footer{
+footer {
     height: 100px;
 }
 
@@ -504,8 +543,8 @@ textarea {
     color: #F2F2F2;
 }
 
-.about-values ul{
-   display: grid;
+.about-values ul {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -578,29 +617,47 @@ textarea {
 
 @media (max-width: 920px) {
 
-    .mobile-menu {
+    .menu-icon {
         display: block;
     }
 
-    .mobile-menu i {
-        font-size: 6vh;
+    .desktop-menu {
+        display: none;
     }
 
-    ul {
-        display: none;
+    .hero-section-title {
+        font-size: 6vh;
+        width: 80%;
+    }
+
+    .hero-section-subtitle {
+        font-size: 4vh;
     }
 
 }
 
 @media (max-width: 810px) {
 
+    .logo{
+        font-size: 4vh;
+    }
+
     .hero-section-title {
-        font-size: 7vh;
-        width: 70%;
+        font-size: 6vh;
+        width: 80%;
     }
 
     .hero-section-subtitle {
         font-size: 4vh;
+    }
+
+     .section-title {
+        width: 80%;
+        font-size: 6vh;
+    }
+
+    .section-subtitle {
+        font-size: 3vh;
     }
 }
 
@@ -608,9 +665,14 @@ textarea {
 
     .hero-section-title {
         font-size: 6vh;
+        width: 80%;
     }
 
-    .form-row{
+    .contact-form-section {
+        width: 95%;
+    }
+
+    .form-row {
         display: grid;
     }
 
@@ -623,39 +685,57 @@ textarea {
         font-size: 3vh;
     }
 
+    .contact-info {
+        font-size: 2vh;
+    }
+
+    .social-medias i {
+        font-size: 5vh;
+    }
+
+    .social-medias i:hover {
+        transform: scale(1.02);
+        color: #A8FF60;
+    }
+
 }
 
 @media (max-width:540px) {
 
     .logo {
+        font-size: 3vh;
+    }
+
+    .mobile-menu i {
         font-size: 4vh;
     }
 
-    header{
+    header {
         padding: 0 5% 0 5%;
     }
 
     .hero-section-title {
         width: 80%;
-        font-size: 5.5vh;
+        font-size: 4vh;
     }
 
     .hero-section-subtitle {
-        font-size: 3.5vh;
+        font-size: 2vh;
     }
 
-    .section-title{
+    .section-title {
         width: 80%;
-        font-size: 5.5vh;
+        font-size: 4vh;
     }
 
-    .section-subtitle{
-        font-size: 3.5vh;
+    .section-subtitle {
+        font-size: 2vh;
     }
 
     .CTA-button {
-        height: 12vh;
-        font-size: 3.5vh;
+        height: auto;
+        font-size: 2.5vh;
+        margin-top: 5vh;
     }
 
     .about-history p,
@@ -663,10 +743,12 @@ textarea {
     .about-team p {
         font-size: 2.5vh;
     }
+
     .team-members {
         flex-direction: column;
         align-items: center;
     }
+
     .team-member {
         width: 80%;
     }
