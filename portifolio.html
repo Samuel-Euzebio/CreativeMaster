@@ -12,45 +12,27 @@
 <body>
     <header>
         <div class="logo">CreativeMaster</div>
-        <nav>
-            <ul>
-                <a href="./index.html">
-                    <li>Home</li>
-                </a>
-                <a href="./service.html">
-                    <li>Serviços</li>
-                </a>
-                <a href="portifolio.html">
-                    <li>Portfólio</li>
-                </a>
-                <a href="./contact.html">
-                    <li>Contato</li>
-                </a>
-                <a href="./about.html">
-                    <li class="about">Sobre nós</li>
-                </a>
+
+        <nav class="main-nav">
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="desktop-menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./service.html">Serviços</a></li>
+                <li><a href="./portifolio.html">Portfólio</a></li>
+                <li><a href="./contact.html">Contato</a></li>
+                <li><a href="./about.html">Sobre nós</a></li>
             </ul>
-        </nav>
-        <nav class="mobile-menu">
-            <i class="fa-solid fa-bars">
-                <ul>
-                    <a href="./index.html">
-                        <li>Home</li>
-                    </a>
-                    <a href="./service.html">
-                        <li>Serviços</li>
-                    </a>
-                    <a href="portifolio.html">
-                        <li>Portfólio</li>
-                    </a>
-                    <a href="./contact.html">
-                        <li>Contato</li>
-                    </a>
-                    <a href="./about.html">
-                        <li class="about">Sobre nós</li>
-                    </a>
-                </ul>
-            </i>
+
+            <ul class="mobile-nav-links" id="menu-toggle">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./service.html">Serviços</a></li>
+                <li><a href="./portifolio.html">Portfólio</a></li>
+                <li><a href="./contact.html">Contato</a></li>
+                <li><a href="./about.html">Sobre nós</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -60,33 +42,33 @@
     </section>
 
     <section class="portfolio-filters">
-        <button class="filter-button">Todos</button>
-        <button class="filter-button">Web</button>
-        <button class="filter-button">Design Gráfico</button>
-        <button class="filter-button">Social Media</button>
-        <button class="filter-button">Branding</button>
+        <button class="filter-button" data-filter="all">Todos</button>
+        <button class="filter-button" data-filter="web">Web</button>
+        <button class="filter-button" data-filter="design">Design Gráfico</button>
+        <button class="filter-button" data-filter="social">Social Media</button>
+        <button class="filter-button" data-filter="branding">Branding</button>
     </section>
 
     <section class="portfolio-grid">
-        <div class="portfolio-card">
+        <div class="portfolio-card" data-category="web">
             <img src="./img/portifolio-img.png" alt="Projeto Web 1">
             <h3>Website para Startup XYZ</h3>
             <p>Categoria: Desenvolvimento Web</p>
         </div>
 
-        <div class="portfolio-card">
+        <div class="portfolio-card" data-category="social">
             <img src="./img/portifolio-img.png" alt="Projeto Social Media">
             <h3>Campanha de Mídia Social</h3>
             <p>Categoria: Social Media</p>
         </div>
 
-        <div class="portfolio-card">
+        <div class="portfolio-card" data-category="design">
             <img src="./img/portifolio-img.png" alt="Projeto Design Gráfico">
             <h3>Identidade Visual - Loja ABC</h3>
             <p>Categoria: Design Gráfico</p>
         </div>
 
-        <div class="portfolio-card">
+        <div class="portfolio-card" data-category="branding">
             <img src="./img/portifolio-img.png" alt="Projeto Branding">
             <h3>Rebranding Empresa 123</h3>
             <p>Categoria: Branding</p>
@@ -101,8 +83,8 @@
 
     <footer></footer>
 
-    <script src="https://kit.fontawesome.com/dafebf265a.js" crossorigin="anonymous"></script>
-
+<script src="https://kit.fontawesome.com/dafebf265a.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
