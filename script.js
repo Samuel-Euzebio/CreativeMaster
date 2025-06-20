@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
-
     // --- FILTRO DE PORTFÓLIO ---
     const filterButtons = document.querySelectorAll('.filter-button');
     const portfolioCards = document.querySelectorAll('.portfolio-card');
