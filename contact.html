@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - CreativeMaster</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./img/icon.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">CreativeMaster</div>
+        <nav>
+            <ul>
+                <a href="./index.html">
+                    <li>Home</li>
+                </a>
+                <a href="./service.html">
+                    <li>Serviços</li>
+                </a>
+                <a href="portifolio.html">
+                    <li>Portfólio</li>
+                </a>
+                <a href="./contact.html">
+                    <li>Contato</li>
+                </a>
+                <a href="./about.html">
+                    <li class="about">Sobre nós</li>
+                </a>
+            </ul>
+        </nav>
+        <nav class="mobile-menu">
+            <i class="fa-solid fa-bars">
+                <ul>
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./service.html">
+                        <li>Serviços</li>
+                    </a>
+                    <a href="portifolio.html">
+                        <li>Portfólio</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li>Contato</li>
+                    </a>
+                    <a href="./about.html">
+                        <li class="about">Sobre nós</li>
+                    </a>
+                </ul>
+            </i>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1 class="section-title">Vamos <span class="title-contrast">Conversar?</span></h1>
+        <p class="section-subtitle">Preencha o formulário ou entre em contato pelas redes sociais.</p>
+    </section>
+
+    <section class="contact-form-section">
+        <form id="contact-form" class="contact-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Nome:*</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    <small class="error-message" id="name-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:*</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    <small class="error-message" id="email-error"></small>
+                </div>
+            </div>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000">
+
+            <label for="message">Mensagem:*</label>
+            <textarea name="message" id="message" placeholder="Nos ajude a entender o seu objetivo..."></textarea>
+            <small class="error-message" id="message-error"></small>
+
+            <button type="submit" class="contact-cta-button">Enviar</button>
+        </form>
+
+        <p id="success-message" class="success-message">Enviado com sucesso!</p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Outras formas de contato:</h2>
+        <p><strong>Email:</strong> contato@creativemaster.com</p>
+        <p><strong>Telefone:</strong> (00) 0000-0000</p>
+        <div class="social-medias">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="https://kit.fontawesome.com/dafebf265a.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
