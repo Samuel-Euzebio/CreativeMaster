@@ -117,6 +117,7 @@ body {
     background-attachment: fixed;
     font-family: "Montserrat", sans-serif;
     overflow-y: auto;
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -500,6 +501,13 @@ textarea {
     margin: 10px;
 }
 
+.social-medias {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+}
+
 .social-medias i {
     cursor: pointer;
     font-size: 7vh;
@@ -638,7 +646,7 @@ textarea {
 
 @media (max-width: 810px) {
 
-    .logo{
+    .logo {
         font-size: 4vh;
     }
 
@@ -651,7 +659,7 @@ textarea {
         font-size: 4vh;
     }
 
-     .section-title {
+    .section-title {
         width: 80%;
         font-size: 6vh;
     }
@@ -716,26 +724,35 @@ textarea {
 
     .hero-section-title {
         width: 80%;
-        font-size: 4vh;
+        font-size: 5vh;
     }
 
     .hero-section-subtitle {
-        font-size: 2vh;
+        font-size: 3vh;
     }
 
     .section-title {
         width: 80%;
-        font-size: 4vh;
+        font-size: 5vh;
     }
 
     .section-subtitle {
-        font-size: 2vh;
+        font-size: 3vh;
     }
 
     .CTA-button {
         height: auto;
         font-size: 2.5vh;
         margin-top: 5vh;
+    }
+
+    .portfolio-grid {
+        padding: 0;
+    }
+
+    .portfolio-card {
+        width: 80%;
+        justify-self: center;
     }
 
     .about-history p,
