@@ -721,6 +721,12 @@ textarea {
         color: #A8FF60;
     }
 
+    .CTA-button {
+        height: auto;
+        font-size: 4vh;
+        margin-top: 5vh;
+    }
+
 }
 
 @media (max-width:540px) {
@@ -753,12 +759,6 @@ textarea {
 
     .section-subtitle {
         font-size: 3vh;
-    }
-
-    .CTA-button {
-        height: auto;
-        font-size: 2.5vh;
-        margin-top: 5vh;
     }
 
     .portfolio-grid {
