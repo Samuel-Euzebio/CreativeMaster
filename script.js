@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     menuIcon.addEventListener('click', (event) => {
         event.stopPropagation();
-        mobileNav.classList.add('show');
+        mobileNav.classList.toggle('show');
     });
 
     document.addEventListener('click', (event) => {
@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // --- FILTRO DE PORTFÓLIO ---
     const filterButtons = document.querySelectorAll('.filter-button');
     const portfolioCards = document.querySelectorAll('.portfolio-card');
 
@@ -30,28 +29,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (filterValue === 'all' || cardCategory === filterValue) {
                     card.style.display = 'block';
-                    // Animação suave de entrada
+
                     setTimeout(() => {
                         card.style.opacity = '1';
                         card.style.transform = 'scale(1)';
                     }, 50);
                 } else {
-                    // Animação suave de saída
+
                     card.style.opacity = '0';
                     card.style.transform = 'scale(0.95)';
                     setTimeout(() => {
                         card.style.display = 'none';
-                    }, 300); // deve ser igual ao transition do CSS
+                    }, 300);
                 }
             });
 
-            // Destacar botão ativo
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
         });
     });
 
-    // --- FORMULÁRIO DE CONTATO ---
     const form = document.getElementById('contact-form');
     const formButton = document.querySelector('.contact-cta-button');
     const successMessage = document.getElementById('success-message');
