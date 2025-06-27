@@ -17,6 +17,8 @@ html, body {
   overflow-x: hidden;
 }
 
+
+
 button,
 input,
 textarea,
@@ -37,8 +39,11 @@ textarea:focus {
 }
 
 button,
-a {
+a,
+.menu-icon,
+.menu-icon * {
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 img {
